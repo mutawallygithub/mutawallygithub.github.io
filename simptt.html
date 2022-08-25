@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Rekon Data Non ASN By Raden Parhanudin">
+    <meta name="csrf-token" content="H646GrbvUbTquBdYKqfvyu3951QLoWxvskcnKwIb">
+    <title>Rekon Data Non ASN</title>
+    
+    <link rel="stylesheet" href="all.min.css">
+    
+    <link rel="stylesheet" href="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <link rel="stylesheet" href="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/plugins/HoldOn/HoldOn.min.css">
+    
+    <link rel="stylesheet" href="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/dist/css/app.css">
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+            </ul>
+        </nav>
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/home" class="brand-link">
+                <img src="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/dist/img/non-asn.png" alt="Rekon Data Non ASN Logo" class="brand-image mt-0">
+                <span class="brand-text ff-oswald text-white">Rekon Data Non ASN</span>
+            </a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div id="userImage" class="image pt-3 d-none">
+                        <img src="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/dist/img/non-asn.png" class="img-circle elevation-3 mr-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block text-white mb-1">Mutawally</a>
+                        <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/logout" class="btn btn-xs btn-danger active px-2"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        <i class="fas fa-sign-out-alt mr-1"></i>Logout
+                    </a>
+                    <form id="logout-form" action="https://simpeg.sumbawabaratkab.go.id/simpttksb/logout" method="POST" class="d-none">
+                        <input type="hidden" name="_token" value="H646GrbvUbTquBdYKqfvyu3951QLoWxvskcnKwIb">                    </form>
+                </div>
+            </div>
+            <nav class="mt-2 pb-4">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                                                            <li class="nav-item">
+    <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/dashboard" class="nav-link ">
+        <i class="nav-icon fas fa-tachometer-alt"></i>
+        <p>
+            Dashboard
+        </p>
+    </a>
+</li>                                                                                                                                                                <li class="nav-item">
+    <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-personal/profile" class="nav-link active">
+        <i class="fas fa-user-tie fa-fw nav-icon"></i>
+        <p>Profile</p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-personal/riwayat-kontrak" class="nav-link ">
+        <i class="fas fa-history fa-fw nav-icon"></i>
+        <p>Riwayat Kontrak</p>
+    </a>
+</li>
+                                                                                <li class="nav-item ">
+    <a href="#" class="nav-link ">
+        <i class="nav-icon fas fa-database"></i>
+        <p>
+            Data Referensi
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+                <li class="nav-item ">
+            <a href="#" class="nav-link ">
+                <i class="fas fa-arrow-alt-circle-right nav-icon"></i>
+                <p>
+                    Jabatan
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/jabatan" class="nav-link ">
+                        <i class="far fa-arrow-alt-circle-right nav-icon"></i>
+                        <p>Jabatan</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/jenis-jabatan" class="nav-link ">
+                        <i class="far fa-arrow-alt-circle-right nav-icon"></i>
+                        <p>Jenis Jabatan</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item ">
+            <a href="#" class="nav-link ">
+                <i class="fas fa-arrow-alt-circle-right nav-icon"></i>
+                <p>
+                    Pendidikan
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/pendidikan" class="nav-link ">
+                        <i class="far fa-arrow-alt-circle-right nav-icon"></i>
+                        <p>Pendidikan</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/jenjang-pendidikan" class="nav-link ">
+                        <i class="far fa-arrow-alt-circle-right nav-icon"></i>
+                        <p>Jenjang Pendidikan</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/lokasi" class="nav-link ">
+                <i class="fas fa-arrow-alt-circle-right nav-icon"></i>
+                <p>Tempat Lahir</p>
+            </a>
+        </li>
+        <li class="nav-item d-none">
+            <a href="#" class="nav-link ">
+                <i class="fas fa-arrow-alt-circle-right nav-icon"></i>
+                <p>SK Kolektif</p>
+            </a>
+        </li>
+    </ul>
+</li>
+                                                                                                                    </ul>
+            </nav>
+        </div>
+    </aside>
+    <div class="content-wrapper">
+        <div class="content">
+    <div class="container-fluid pt-3">
+        <div class="row">
+    <div class="col-sm-12">
+        <div class="card card-default">
+            <div class="card-header">
+                <h3 class="card-title pt-1 font-weight-bold">
+                    <i class="fas fa-user-tie fa-fw mr-2"></i>Profile
+                </h3>
+                <div class="card-tools">
+                    <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-personal/profile/cetak" target="_blank" class="btn btn-light float-right font-weight-bold"><i class="fas fa-print mr-2"></i>Cetak</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>        <div class="col-12">
+  <div class="card card-primary card-outline card-outline-tabs">
+    <div class="card-header p-0 border-bottom-0">
+      <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="profile-tab" data-toggle="pill" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pendidikan-terakhir-tab" data-toggle="pill" href="#pendidikan-terakhir" role="tab" aria-controls="pendidikan-terakhir" aria-selected="false">Pendidikan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="jabatan-terakhir-tab" data-toggle="pill" href="#jabatan-terakhir" role="tab" aria-controls="jabatan-terakhir" aria-selected="false">Jabatan</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <div class="tab-content" id="custom-tabs-four-tabContent">
+        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <form action="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-personal/profile" class="formUpload" method="POST">
+            <div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label>Unit Kerja<sup class="text-danger">*</sup></label>
+            <select name="unit_kerja_id" id="unit_kerja_id" class="form-control form-control-sm select2bs4" style="width: 100%">
+                <option></option>
+            </select>
+            <div class="invalid-feedback" id="feedback_unit_kerja_id"></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label>NIK<sup class="text-danger">*</sup></label>
+            <input type="text" name="nik" id="nik" class="form-control form-control-sm" placeholder="NIK">
+            <div class="invalid-feedback" id="feedback_nik"></div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label>Nomor KK<sup class="text-danger">*</sup></label>
+            <input type="text" name="nomor_kk" id="nomor_kk" class="form-control form-control-sm" placeholder="Nomor KK">
+            <div class="invalid-feedback" id="feedback_nomor_kk"></div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label>Nomor Peserta (Eks. THK II)</label>
+            <select name="eks_thk_ii_id" id="eks_thk_ii_id" class="form-control form-control-sm select2bs4">
+                <option></option>
+            </select>
+            <div class="invalid-feedback" id="feedback_eks_thk_ii_id"></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label>Nama Lengkap<sup class="text-danger">*</sup></label>
+            <input type="text" name="nama_lengkap" id="nama_lengkap" class="form-control form-control-sm" placeholder="Nama Lengkap">
+            <div class="invalid-feedback" id="feedback_nama_lengkap"></div>
+            <small class="form-text text-primary">Nama Lengkap TANPA GELAR</small>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label>Tempat Lahir<sup class="text-danger">*</sup></label>
+            <select name="tempat_lahir_id" id="tempat_lahir_id" class="form-control form-control-sm select2bs4">
+                <option></option>
+            </select>
+            <div class="invalid-feedback" id="feedback_tempat_lahir_id"></div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label>Tanggal Lahir<sup class="text-danger">*</sup></label>
+            <input type="date" name="tanggal_lahir" id="tanggal_lahir" class="form-control form-control-sm" placeholder="Tanggal Lahir">
+            <div class="invalid-feedback" id="feedback_tanggal_lahir"></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label>Jenis Kelamin<sup class="text-danger">*</sup></label>
+            <select name="jenis_kelamin" id="jenis_kelamin" class="form-control form-control-sm select2bs4-infinity" data-placeholder="Jenis Kelamin">
+                <option></option>
+                <option value="L">Pria</option>
+                <option value="P">Wanita</option>
+            </select>
+            <div class="invalid-feedback" id="feedback_jenis_kelamin"></div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label>Kontak<sup class="text-danger">*</sup></label>
+            <input type="text" name="kontak" id="kontak" class="form-control form-control-sm" placeholder="Kontak">
+            <div class="invalid-feedback" id="feedback_kontak"></div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Alamat<sup class="text-danger">*</sup></label>
+            <textarea name="alamat" id="alamat" class="form-control form-control-sm" placeholder="Alamat"></textarea>
+            <div class="invalid-feedback" id="feedback_alamat"></div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-2">
+        <img src="#" width="150px" class="img img-rounded" id="foto_profile" alt="">
+    </div>
+    <div class="col-sm-10 pl-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label>Foto Profile<sup class="text-danger">*</sup></label><br>
+                    <input type="file" name="_foto_profile" id="_foto_profile" accept="image/*">
+                    <div class="invalid-feedback" id="feedback__foto_profile"></div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Foto KTP (ID GDrive)<sup class="text-danger">*</sup></label><br>
+                    <input type="text" name="foto_ktp" id="foto_ktp" class="form-control form-control-sm" placeholder="ID GDrive">
+                    <a href="#" id="show_foto_ktp" target="_blank"></a>
+                    <div class="invalid-feedback" id="feedback_foto_ktp"></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Kartu Keluarga (ID GDrive)<sup class="text-danger">*</sup></label><br>
+                    <input type="text" name="file_kk" id="file_kk" class="form-control form-control-sm" placeholder="ID GDrive">
+                    <a href="#" id="show_file_kk" target="_blank"></a>
+                    <div class="invalid-feedback" id="feedback_file_kk"></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Surat Pernyataan (ID GDrive)<sup class="text-danger">*</sup></label><br>
+                    <input type="text" name="surat_pernyataan" id="surat_pernyataan" class="form-control form-control-sm" placeholder="ID GDrive">
+                    <a href="#" id="show_surat_pernyataan" target="_blank"></a>
+                    <div class="invalid-feedback" id="feedback_surat_pernyataan"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3 class="pt-3">Masa Kerja</h3>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Tahun</label><br>
+                    <input type="text" readonly name="masa_kerja_tahun" id="masa_kerja_tahun" class="form-control form-control-sm" placeholder="Tahun">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Bulan</label><br>
+                    <input type="text" readonly name="masa_kerja_bulan" id="masa_kerja_bulan" class="form-control form-control-sm" placeholder="Bulan">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row mt-3">
+    <div class="col-sm-12">
+        <button type="submit" class="btn btn-primary"><i class="fas fa-hdd mr-2"></i>Simpan</button>
+        <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-personal/profile/status" class="btn btn-dark float-right btn-cek-status"><i class="far fa-check-circle fa-fw mr-2"></i>Cek Status</a>
+    </div>
+</div>
+          </form>
+        </div>
+        <div class="tab-pane fade" id="pendidikan-terakhir" role="tabpanel" aria-labelledby="pendidikan-terakhir-tab">
+          <form action="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-personal/pendidikan-terakhir" class="formUpload" method="POST">
+            <div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Jenjang Pendidikan<sup class="text-danger">*</sup></label>
+            <select name="jenjang_pendidikan_id" id="jenjang_pendidikan_id" class="form-control form-control-sm select2bs4">
+                <option></option>
+            </select>
+            <div class="invalid-feedback" id="feedback_jenjang_pendidikan_id"></div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Pendidikan<sup class="text-danger">*</sup></label>
+            <select name="pendidikan_id" id="pendidikan_id" class="form-control form-control-sm select2bs4">
+                <option></option>
+            </select>
+            <div class="invalid-feedback" id="feedback_pendidikan_id"></div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label>Nomor Ijazah<sup class="text-danger">*</sup></label>
+            <input type="text" name="nomor_ijazah" id="nomor_ijazah" class="form-control form-control-sm" placeholder="Nomor Ijazah">
+            <div class="invalid-feedback" id="feedback_nomor_ijazah"></div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label>Sekolah / Perguruan Tinggi<sup class="text-danger">*</sup></label>
+            <input type="text" name="sekolah_perguruan_tinggi" id="sekolah_perguruan_tinggi" class="form-control form-control-sm" placeholder="Sekolah / Perguruan Tinggi">
+            <div class="invalid-feedback" id="feedback_sekolah_perguruan_tinggi"></div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label>Tanggal Lulus<sup class="text-danger">*</sup></label>
+            <input type="date" name="tanggal_lulus" id="tanggal_lulus" class="form-control form-control-sm" placeholder="Tanggal Lulus">
+            <div class="invalid-feedback" id="feedback_tanggal_lulus"></div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <label>IPK</label>
+            <input type="text" name="ipk" id="ipk" class="form-control form-control-sm" placeholder="IPK">
+            <div class="invalid-feedback" id="feedback_ipk"></div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label>Ijazah & Transkrip Nilai (ID Gdrive)<sup class="text-danger">*</sup></label><br>
+            <input type="text" name="file_ijazah" id="file_ijazah" class="form-control form-control-sm" placeholder="ID GDrive">
+            <a href="#" id="show_file_ijazah" target="_blank"></a>
+            <div class="invalid-feedback" id="feedback_file_ijazah"></div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row mt-3">
+    <div class="col-sm-12">
+        <button type="submit" class="btn btn-primary"><i class="fas fa-hdd mr-2"></i>Simpan</button>
+        <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-personal/pendidikan-terakhir/status" class="btn btn-dark float-right btn-cek-status"><i class="far fa-check-circle fa-fw mr-2"></i>Cek Status</a>
+    </div>
+</div>
+          </form>
+        </div>
+        <div class="tab-pane fade" id="jabatan-terakhir" role="tabpanel" aria-labelledby="jabatan-terakhir-tab">
+          <form action="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-personal/jabatan-terakhir" class="formUpload" method="POST">
+            <div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Jenis Jabatan<sup class="text-danger">*</sup></label>
+            <select name="jenis_jabatan_id" id="jenis_jabatan_id" class="form-control form-control-sm select2bs4" style="width: 100%">
+                <option></option>
+            </select>
+            <div class="invalid-feedback" id="feedback_jenis_jabatan_id"></div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Jabatan / Tugas<sup class="text-danger">*</sup></label>
+            <select name="jabatan_id" id="jabatan_id" class="form-control form-control-sm select2bs4" style="width: 100%">
+                <option></option>
+            </select>
+            <div class="invalid-feedback" id="feedback_jabatan_id"></div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Nomor SK Jabatan / Pembagian Tugas<sup class="text-danger">*</sup></label>
+            <input type="text" name="nomor_sk" id="nomor_sk" class="form-control form-control-sm" placeholder="Nomor SK">
+            <div class="invalid-feedback" id="feedback_nomor_sk"></div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Tanggal SK Jabatan / Pembagian Tugas<sup class="text-danger">*</sup></label>
+            <input type="date" name="tanggal_sk" id="tanggal_sk" class="form-control form-control-sm" placeholder="Tanggal SK">
+            <div class="invalid-feedback" id="feedback_tanggal_sk"></div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Mulai Bekerja (TMT SK Pengangkatan Terakhir)<sup class="text-danger">*</sup></label>
+            <input type="date" name="tanggal_mulai" id="tanggal_mulai" class="form-control form-control-sm" placeholder="Mulai Bekerja">
+            <div class="invalid-feedback" id="feedback_tanggal_mulai"></div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Selesai Bekerja (SK terakhir)<sup class="text-danger">*</sup></label>
+            <input type="date" name="tanggal_selesai" id="tanggal_selesai" class="form-control form-control-sm" placeholder="Selesai Bekerja">
+            <div class="invalid-feedback" id="feedback_tanggal_selesai"></div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label>Unit Kerja<sup class="text-danger">*</sup></label>
+            <select name="jabatan_unit_kerja_id" id="jabatan_unit_kerja_id" class="form-control form-control-sm select2bs4" style="width: 100%">
+                <option></option>
+            </select>
+            <div class="invalid-feedback" id="feedback_jabatan_unit_kerja_id"></div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label>SK Jabatan / Pembagian Tugas (ID Gdrive)<sup class="text-danger">*</sup></label><br>
+            <input type="text" name="file_sk_jabatan" id="file_sk_jabatan" class="form-control form-control-sm" placeholder="ID GDrive">
+            <a href="#" id="show_file_sk_jabatan" target="_blank"></a>
+            <div class="invalid-feedback" id="feedback_file_sk_jabatan"></div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row mt-3">
+    <div class="col-sm-12">
+        <button type="submit" class="btn btn-primary"><i class="fas fa-hdd mr-2"></i>Simpan</button>
+        <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/data-personal/jabatan-terakhir/status" class="btn btn-dark float-right btn-cek-status"><i class="far fa-check-circle fa-fw mr-2"></i>Cek Status</a>
+    </div>
+</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>    </div>
+</div>
+<div class="modal fade " id="modalStatus">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-body">
+                                <table class="table table-borderless table-striped">
+                                        <tr>
+                        <td>Status Verifikasi</td>
+                        <td>:</td>
+                        <td id="status_status_verifikasi"></td>
+                    </tr>
+                                        <tr>
+                        <td>Keterangan Verifikator</td>
+                        <td>:</td>
+                        <td id="status_keterangan_verifikator"></td>
+                    </tr>
+                                        <tr>
+                        <td>Tanggal Verifikasi</td>
+                        <td>:</td>
+                        <td id="status_tanggal_verifikasi"></td>
+                    </tr>
+                                        <tr>
+                        <td>Status Approval</td>
+                        <td>:</td>
+                        <td id="status_status_approve"></td>
+                    </tr>
+                                        <tr>
+                        <td>Keterangan Approval</td>
+                        <td>:</td>
+                        <td id="status_keterangan_approval"></td>
+                    </tr>
+                                        <tr>
+                        <td>Tanggal Approval</td>
+                        <td>:</td>
+                        <td id="status_tanggal_approve"></td>
+                    </tr>
+                                    </table>
+            </div>
+        </form>
+    </div>
+</div>
+</div>    </div>
+    <footer class="main-footer text-muted">
+        <div class="float-right d-none d-sm-inline">
+            By <a href="https://bkd.sumbawabaratkab.go.id" target="_blank" class="text-muted">BKPSDM Kabupaten Sumbawa Barat</a>
+        </div>
+        Copyright &copy; 2022 <a href="https://simpeg.sumbawabaratkab.go.id/simpttksb/home" class="text-muted">Rekon Data Non ASN</a>. All rights reserved.
+    </footer>
+</div>
+<script src="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/plugins/jquery/jquery.min.js"></script>
+<script src="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+<script src="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/plugins/select2/js/select2.full.min.js"></script>
+<script src="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/plugins/HoldOn/HoldOn.min.js"></script>
+<script src="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/dist/js/adminlte.min.js"></script>
+<script src="https://simpeg.sumbawabaratkab.go.id/simpttksb/template/dist/js/app.js"></script>
+<script>
+    $(document).ready(function(){
+        // modalStatus
+        // btn-cek-status
+        $('.btn-cek-status').on('click', function(e){
+            e.preventDefault()
+            $.ajax({
+                url: $(this).attr('href'),
+                beforeSend: function () {
+                    HoldOn.open()
+                },
+                success: function (res) {
+                    HoldOn.close()
+                    if(res.status){
+                        $('#modalStatus').modal('show')
+                    }
+                }
+            })
+        })
+
+        if (location.hash) {
+            $("a[href='" + location.hash + "']").tab("show");
+            if(location.hash == "#profile"){
+                getProfile()
+            }
+        }else{
+            getProfile()
+        }
+        $(document.body).on("click", "a[data-toggle='pill']", function(event) {
+            location.hash = this.getAttribute("href");
+        });
+
+        $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+            var target = e.target.id
+            if(target == "profile-tab"){
+                getProfile()
+            }
+            if(target == "pendidikan-terakhir-tab"){
+                getPendidikanTerakhir()
+            }
+                
+            if(target == "jabatan-terakhir-tab"){
+                getJabatanTerakhir()
+            }
+        })
+
+        function getJabatanTerakhir(){
+            $.ajax({
+            url: "https://simpeg.sumbawabaratkab.go.id/simpttksb/data-personal/jabatan-terakhir/data",
+            success:function (res) {
+                if(res.status){
+                    $.each(res.data, function(key, val){
+                        $("#" + key).val(val)
+                    })  
+                    if(res.data.show_file_sk_jabatan != null){
+                        $('#show_file_sk_jabatan').attr('href', res.data.show_file_sk_jabatan)
+                        $('#show_file_sk_jabatan').text('SK Jabatan')
+                    }
+                    $.get("https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/jenis-jabatan", {jenis_jabatan_id: res.data.jenis_jabatan_id}, function(jenisJabatan){
+                        $('#jenis_jabatan_id').empty()
+                        $('#jenis_jabatan_id').append('<option></option>')
+                        $.each(jenisJabatan, function(key, val){
+                            $('#jenis_jabatan_id').append('<option value="'+val.id+'">'+val.text+'</option>')
+                        })
+                        $("#jenis_jabatan_id").val(res.data.jenis_jabatan_id).trigger('change')  
+                    })
+                    $.get("https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/jabatan", {jabatan_id: res.data.jabatan_id}, function(jabatan){
+                        $('#jabatan_id').empty()
+                        $('#jabatan_id').append('<option></option>')
+                        $.each(jabatan, function(key, val){
+                            $('#jabatan_id').append('<option value="'+val.id+'">'+val.text+'</option>')
+                        })
+                        $("#jabatan_id").val(res.data.jabatan_id).trigger('change')  
+                    })
+                    $.get("https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/unit-kerja", {unit_kerja_id: res.data.unit_kerja_id}, function(unit_kerja){
+                        $('#jabatan_unit_kerja_id').empty()
+                        $('#jabatan_unit_kerja_id').append('<option></option>')
+                        $.each(unit_kerja, function(key, val){
+                            $('#jabatan_unit_kerja_id').append('<option value="'+val.id+'">'+val.text+'</option>')
+                        })
+                        $("#jabatan_unit_kerja_id").val(res.data.unit_kerja_id).trigger('change')  
+                    })
+                }
+            }
+        })
+        }
+        
+        function getPendidikanTerakhir(){
+            $.ajax({
+                url: "https://simpeg.sumbawabaratkab.go.id/simpttksb/data-personal/pendidikan-terakhir/data",
+                success: function (res) {
+                    if(res.status){
+                        $.each(res.data, function(key, val){
+                            $("#" + key).val(val)
+                        })  
+                        if(res.data.show_file_ijazah != null){
+                            $('#show_file_ijazah').attr('href', res.data.show_file_ijazah)
+                            $('#show_file_ijazah').text('Ijazah & Transkrip Nilai')
+                        }
+                        $.get("https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/jenjang-pendidikan", {jenjang_pendidikan_id: res.data.jenjang_pendidikan_id}, function(jenjang_pendidikan){
+                            $('#jenjang_pendidikan_id').empty()
+                            $('#jenjang_pendidikan_id').append('<option></option>')
+                            $.each(jenjang_pendidikan, function(key, val){
+                                $('#jenjang_pendidikan_id').append('<option value="'+val.id+'">'+val.text+'</option>')
+                            })
+                            $("#jenjang_pendidikan_id").val(res.data.jenjang_pendidikan_id).trigger('change')  
+                        })
+                        $.get("https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/pendidikan", {pendidikan_id: res.data.pendidikan_id}, function(pendidikan){
+                            $('#pendidikan_id').empty()
+                            $('#pendidikan_id').append('<option></option>')
+                            $.each(pendidikan, function(key, val){
+                                $('#pendidikan_id').append('<option value="'+val.id+'">'+val.text+'</option>')
+                            })
+                            $("#pendidikan_id").val(res.data.pendidikan_id).trigger('change')  
+                        })
+                    }
+                }
+            })
+        }
+        function getProfile(){
+            $.ajax({
+                url: "https://simpeg.sumbawabaratkab.go.id/simpttksb/data-personal/profile/data",
+                success: function (res) {
+                    if(res.status){
+                        $.each(res.data, function(key, val){
+                            $("#" + key).val(val)
+                        })  
+                        src = (res.data.foto_profile != null) ? res.data.foto_profile : "#";
+                        $('#foto_profile').attr('src', src)
+                        if(res.data.show_foto_ktp != null){
+                            $('#show_foto_ktp').attr('href', res.data.show_foto_ktp)
+                            $('#show_foto_ktp').text('Foto KTP')
+                        }
+                        if(res.data.show_file_kk != null){
+                            $('#show_file_kk').attr('href', res.data.show_file_kk)
+                            $('#show_file_kk').text('KK')
+                        }
+                        if(res.data.show_surat_pernyataan != null){
+                            $('#show_surat_pernyataan').attr('href', res.data.show_surat_pernyataan)
+                            $('#show_surat_pernyataan').text('Surat Pernyataan')
+                        }
+                        $("#jenis_kelamin").val(res.data.jenis_kelamin).trigger('change')  
+                        $.get("https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/unit-kerja", {unit_kerja_id: res.data.unit_kerja_id}, function(unit_kerja){
+                            $('#unit_kerja_id').empty()
+                            $('#unit_kerja_id').append('<option></option>')
+                            $.each(unit_kerja, function(key, val){
+                                $('#unit_kerja_id').append('<option value="'+val.id+'">'+val.text+'</option>')
+                            })
+                            $("#unit_kerja_id").val(res.data.unit_kerja_id).trigger('change')  
+                        })
+                        $.get("https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/eks-thk-ii", {eks_thk_ii_id: res.data.eks_thk_ii_id}, function(eks_thk_ii){
+                            $('#eks_thk_ii_id').empty()
+                            $('#eks_thk_ii_id').append('<option></option>')
+                            $.each(eks_thk_ii, function(key, val){
+                                $('#eks_thk_ii_id').append('<option value="'+val.id+'">'+val.text+'</option>')
+                            })
+                            $("#eks_thk_ii_id").val(res.data.eks_thk_ii_id).trigger('change')  
+                        })
+                        $.get("https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/lokasi", {lokasi_id: res.data.tempat_lahir_id}, function(lokasi){
+                            $('#tempat_lahir_id').empty()
+                            $('#tempat_lahir_id').append('<option></option>')
+                            $.each(lokasi, function(key, val){
+                                $('#tempat_lahir_id').append('<option value="'+val.id+'">'+val.text+'</option>')
+                            })
+                            $("#tempat_lahir_id").val(res.data.tempat_lahir_id).trigger('change')  
+                        })
+                    }
+                }
+            })
+        }
+
+        $('#unit_kerja_id').select2({
+            placeholder: "Unit Kerja",
+            delay: 250,
+            ajax: {
+                url: "https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/unit-kerja",
+                dataType: 'json',
+                data: function (params) {
+                    return {
+                        search: $.trim(params.term),
+                    };
+                },
+                processResults: function (response) {
+                    return {
+                        results: response
+                    };
+                },
+                cache: true
+            }
+        });
+        $('#eks_thk_ii_id').select2({
+            placeholder: "Nomor Peserta",
+            minimumInputLength: 15,
+            allowClear: true,
+            delay: 250,
+            ajax: {
+                url: "https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/eks-thk-ii",
+                dataType: 'json',
+                data: function (params) {
+                    return {
+                        search: $.trim(params.term)
+                    };
+                },
+                processResults: function (response) {
+                    return {
+                        results: response
+                    };
+                },
+                cache: true
+            }
+        });
+        $('#tempat_lahir_id').select2({
+            placeholder: "Tempat Lahir",
+            delay: 1000,
+            ajax: {
+                url: "https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/lokasi",
+                dataType: 'json',
+                data: function (params) {
+                    return {
+                        search: $.trim(params.term),
+                    };
+                },
+                processResults: function (response) {
+                    return {
+                        results: response
+                    };
+                },
+                cache: true
+            }
+        })
+        $('#jenjang_pendidikan_id').select2({
+            placeholder: "Jenjang Pendidikan",
+            delay: 250,
+            ajax: {
+                url: "https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/jenjang-pendidikan",
+                dataType: 'json',
+                data: function (params) {
+                    return {
+                        search: $.trim(params.term),
+                    };
+                },
+                processResults: function (response) {
+                    return {
+                        results: response
+                    };
+                },
+                cache: true
+            }
+        });
+        $('#pendidikan_id').select2({
+            placeholder: "Pendidikan Terakhir",
+            delay: 1000,
+            ajax: {
+                url: "https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/pendidikan",
+                dataType: 'json',
+                data: function (params) {
+                    return {
+                        search: $.trim(params.term),
+                        jenjang_pendidikan_id: $('#jenjang_pendidikan_id').val()
+                    };
+                },
+                processResults: function (response) {
+                    return {
+                        results: response
+                    };
+                },
+                cache: true
+            }
+        });
+        $('#jenjang_pendidikan_id').on('select2:select', function(e){
+            e.preventDefault();
+            $('#pendidikan_id').empty()
+        })
+        $('#jenis_jabatan_id').select2({
+            placeholder: "Jenis Jabatan",
+            delay: 250,
+            ajax: {
+                url: "https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/jenis-jabatan",
+                dataType: 'json',
+                data: function (params) {
+                    return {
+                        search: $.trim(params.term)
+                    };
+                },
+                processResults: function (response) {
+                    return {
+                        results: response
+                    };
+                },
+                cache: true
+            }
+        });
+        $('#jabatan_id').select2({
+            placeholder: "Jabatan",
+            delay: 1000,
+            ajax: {
+                url: "https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/jabatan",
+                dataType: 'json',
+                data: function (params) {
+                    return {
+                        search: $.trim(params.term),
+                        jenis_jabatan_id: $('#jenis_jabatan_id').val()
+                    };
+                },
+                processResults: function (response) {
+                    return {
+                        results: response
+                    };
+                },
+                cache: true
+            }
+        });
+        $('#jenis_jabatan_id').on('select2:select', function(e){
+            e.preventDefault();
+            $('#jabatan_id').empty()
+        })
+        $('#jabatan_unit_kerja_id').select2({
+            placeholder: "Unit Kerja",
+            delay: 250,
+            ajax: {
+                url: "https://simpeg.sumbawabaratkab.go.id/simpttksb/data-referensi/get/unit-kerja",
+                dataType: 'json',
+                data: function (params) {
+                    return {
+                        search: $.trim(params.term),
+                        instansi_id: $('#instansi_id').val(),
+                    };
+                },
+                processResults: function (response) {
+                    return {
+                        results: response
+                    };
+                },
+                cache: true
+            }
+        });
+    })
+
+    
+</script></body>
+</html>
